@@ -10,7 +10,7 @@ import './App.css'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/CampusBite-A2">
       <CartProvider>
         <a className="skip-link" href="#main-content">Skip to main content</a>
         <header className="site-header">

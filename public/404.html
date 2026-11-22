@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CampusBite Islamabad</title>
+    <script>
+      var segment = 1;
+      var location = window.location;
+      var base = '/CampusBite-A2/';
+      var path = location.pathname.replace(base, '').replace(/^\//, '');
+      var query = location.search ? '&' + location.search.slice(1).replace(/&/g, '~and~') : '';
+      var target = base + '?/' + path.split('/').map(function (part) {
+        return part.replace(/&/g, '~and~');
+      }).join('/') + query + location.hash;
+      location.replace(target);
+    </script>
+  </head>
+  <body></body>
+</html>
