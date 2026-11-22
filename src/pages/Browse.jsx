@@ -10,11 +10,12 @@ export function Browse() {
   const [filter, setFilter] = useState('all')
   const [sort, setSort] = useState('default')
   const [retryCount, setRetryCount] = useState(0)
+  const [demoFailure, setDemoFailure] = useState(false)
 
   useEffect(() => {
     let active = true
 
-    loadMenu()
+    loadMenu({ forceError: demoFailure })
       .then((loadedItems) => {
         if (active) {
           setItems(loadedItems)
@@ -31,7 +32,7 @@ export function Browse() {
     return () => {
       active = false
     }
-  }, [retryCount])
+  }, [retryCount, demoFailure])
 
   const visibleItems = useMemo(() => {
     const normalizedQuery = query.trim().toLowerCase()
@@ -57,13 +58,25 @@ export function Browse() {
   }, [items, query, filter, sort])
 
   return (
-    <main className="browse">
+    <main className="browse" id="main-content">
       <header className="browse-header">
         <div>
           <p className="eyebrow">CampusBite Islamabad</p>
           <h1>Browse the menu</h1>
           <p className="subtitle">Student-friendly meals for Islamabad and Wah Cantt.</p>
         </div>
+        <button
+          className="demo-error-button"
+          type="button"
+          onClick={() => {
+            setStatus('loading')
+            setError('')
+            setDemoFailure(true)
+            setRetryCount((count) => count + 1)
+          }}
+        >
+          Demo load failure
+        </button>
       </header>
 
       <section className="menu-controls" aria-label="Menu search and filters">
@@ -117,6 +130,7 @@ export function Browse() {
             onClick={() => {
               setStatus('loading')
               setError('')
+              setDemoFailure(false)
               setRetryCount((count) => count + 1)
             }}
           >

@@ -69,7 +69,7 @@ Vegetarian and non-vegetarian items will not be mixed inside a Weekly Student Bu
 
 Delivery will require a minimum subtotal of Rs. 800. Collection will have no minimum. The checkout interface will show the remaining delivery amount when applicable.
 
-## Technical Plan
+## Technical Implementation
 
 - React with Vite
 - React Router for browse, details, cart, checkout, and confirmation routes
@@ -78,28 +78,28 @@ Delivery will require a minimum subtotal of Rs. 800. Collection will have no min
 - Async mock loader for loading, error, retry, and empty states
 - React context plus localStorage for cart persistence
 - Controlled checkout form and explicit validation messages
-- Automated Node test for the maximum quantity rule
+- Automated Node tests for the maximum quantity rule
 
 ## Accessibility and Responsiveness
 
-The completed interface will include semantic landmarks, associated form labels, visible keyboard focus states, readable mobile layouts at 390 px, and usable controls for pointer and keyboard users.
+The completed interface includes semantic landmarks, associated form labels, visible keyboard focus states, readable mobile layouts at 390 px, and usable controls for pointer and keyboard users.
 
 ## Verification Checklist
 
-- [ ] Full menu visible immediately
-- [ ] No location gate
-- [ ] No forced start-order step
-- [ ] Pure HTML menu
-- [ ] Search, filter, and sort work
-- [ ] Item details and invalid-ID state work
-- [ ] Cart persists in localStorage
-- [ ] Quantity is capped at 8
-- [ ] Bundle dietary styles cannot mix
-- [ ] Delivery minimum is enforced at Rs. 800
-- [ ] Collection has no minimum
-- [ ] Checkout and confirmation flows work
-- [ ] 390 px mobile layout is readable
-- [ ] Automated maximum-quantity test passes
+- [x] Full menu visible immediately
+- [x] No location gate
+- [x] No forced start-order step
+- [x] Pure HTML menu
+- [x] Search, filter, and sort work
+- [x] Item details and invalid-ID state work
+- [x] Cart persists in localStorage
+- [x] Quantity is capped at 8
+- [x] Bundle dietary styles cannot mix
+- [x] Delivery minimum is enforced at Rs. 800
+- [x] Collection has no minimum
+- [x] Checkout and confirmation flows work
+- [x] 390 px mobile layout is readable
+- [x] Automated maximum-quantity test passes
 
 ## How to Run
 

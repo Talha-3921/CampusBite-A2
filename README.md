@@ -26,5 +26,5 @@ npm run preview
 ## Test
 
 ```powershell
-node --test
+npm test
 ```

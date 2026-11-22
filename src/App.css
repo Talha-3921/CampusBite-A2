@@ -404,7 +404,36 @@
 }
 
 .browse-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   margin-bottom: 28px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  z-index: 100;
+  border-radius: 8px;
+  background: #173f35;
+  color: #ffffff;
+  padding: 10px 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+.demo-error-button {
+  border: 1px solid #cbd4c7;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #173f35;
+  padding: 10px 12px;
+  font-weight: 800;
 }
 
 .eyebrow {
@@ -630,6 +659,12 @@
 }
 
 @media (max-width: 390px) {
+  .browse-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
   .confirmation-card dl {
     grid-template-columns: 1fr;
   }

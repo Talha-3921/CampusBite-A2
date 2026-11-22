@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export function PageShell({ title, children }) {
   return (
-    <main className="page-shell">
+    <main className="page-shell" id="main-content">
       <Link className="back-link" to="/">
         Back to menu
       </Link>

@@ -12,6 +12,7 @@ function App() {
   return (
     <BrowserRouter>
       <CartProvider>
+        <a className="skip-link" href="#main-content">Skip to main content</a>
         <header className="site-header">
           <Link className="brand" to="/">
             CampusBite
