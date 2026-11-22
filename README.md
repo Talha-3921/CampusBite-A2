@@ -16,6 +16,10 @@ npm install
 npm run dev
 ```
 
+## Live deployment
+
+https://talha-3921.github.io/CampusBite-A2/
+
 ## Build
 
 ```powershell

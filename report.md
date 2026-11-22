@@ -16,7 +16,7 @@
 | Section | To be entered before submission |
 | Business | CampusBite Islamabad |
 | Repository | https://github.com/Talha-3921/CampusBite-A2 |
-| Deployment | Pending deployment — add the public URL before submission |
+| Deployment | https://talha-3921.github.io/CampusBite-A2/ |
 | Final application commit | `b53e22c50eae9db9f07b93b35d13727ba92a04b8` |
 
 ## 2. Business Profile
@@ -229,7 +229,7 @@ The final application commit recorded in this report is:
 
 ## 11. Deployment
 
-**Deployment status:** Pending at report creation time. The public deployment link must be added before submission.
+**Deployment status:** Live at https://talha-3921.github.io/CampusBite-A2/.
 
 The deployed application must open without sign-in, load its assets, serve the main journey, and support direct refresh on nested routes.
 
@@ -237,7 +237,6 @@ The deployed application must open without sign-in, load its assets, serve the m
 
 - Orders are fictional and do not process real payment or dispatch real meals.
 - Student name, roll number, and section are not supplied and must be completed before submission.
-- A public deployment URL is not supplied and must be added before submission.
 - The PDF menu evidence URL is a public gateway menu reference; the supplied screenshot remains the direct evidence for the assignment issue.
 - The bundle rule represents one dietary style for the whole bundle rather than individual meal selections for each of the five bundle meals.
 

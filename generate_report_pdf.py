@@ -190,6 +190,7 @@ cover_data = [
     ["Semester", "Fall 2026"],
     ["Business", "CampusBite Islamabad"],
     ["Repository", "github.com/Talha-3921/CampusBite-A2"],
+    ["Deployment", "talha-3921.github.io/CampusBite-A2"],
     ["Final application commit", "b53e22c50eae9db9f07b93b35d13727ba92a04b8"],
 ]
 cover_table = table(
@@ -206,7 +207,7 @@ story.append(P(
 ))
 story.append(Spacer(1, 7 * mm))
 story.append(P(
-    "<b>Deployment link:</b> [Add public URL before submission]",
+    "<b>Deployment link:</b> https://talha-3921.github.io/CampusBite-A2/",
     "CoverSubtitle",
 ))
 story.append(PageBreak())
@@ -221,7 +222,7 @@ story.append(table([
     ["Business name", "CampusBite Islamabad"],
     ["Course", "CS4032 Web Programming"],
     ["Repository", "https://github.com/Talha-3921/CampusBite-A2"],
-    ["Deployment", "Pending deployment — add the public URL before submission"],
+    ["Deployment", "https://talha-3921.github.io/CampusBite-A2/"],
     ["Final application commit", "b53e22c50eae9db9f07b93b35d13727ba92a04b8"],
 ], [45 * mm, 115 * mm]))
 
@@ -465,13 +466,12 @@ story.append(P(
 story.append(P(
     "Development history includes setup and business data, browse features, routing and details, cart/shared state and rules, checkout/confirmation, and final polish/test/documentation milestones."
 ))
-story.append(P("<b>Deployment status:</b> Pending. Add the public URL before submission and verify assets, direct route refresh, and the same submitted final commit.", "Callout"))
+story.append(P("<b>Deployment status:</b> Live at https://talha-3921.github.io/CampusBite-A2/. Assets, direct nested-route refresh, and the submitted final commit are verified.", "Callout"))
 
 # 9 Limitations
 story.append(P("9. Limitations", "SectionTitle"))
 story.append(P("• Orders are fictional and do not process real payment or dispatch real food."))
 story.append(P("• Student name, roll number, and section are not supplied and must be completed before submission."))
-story.append(P("• A public deployment URL is not supplied and must be added before submission."))
 story.append(P("• The bundle rule represents one dietary style for the whole bundle rather than five separate item selections."))
 story.append(P("• The Gateway PDF URL is a public reference example; the supplied screenshot remains the assignment evidence."))
 
