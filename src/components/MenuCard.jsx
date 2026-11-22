@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { formatCurrency } from '../utils/formatCurrency'
 
 export function MenuCard({ item }) {
@@ -16,6 +17,9 @@ export function MenuCard({ item }) {
         <h2>{item.name}</h2>
         <p>{item.description}</p>
         <strong className="price">{formatCurrency(item.price)}</strong>
+        <Link className="menu-card__link" to={`/item/${item.id}`}>
+          View details
+        </Link>
       </div>
     </article>
   )
