@@ -35,14 +35,8 @@ npm test
 
 ## Assignment report
 
-The submission-ready PDF source and generated report are:
+The submission-ready files are:
 
 - `report.md`
-- `CS4032_Assignment_02_CampusBite_Report.pdf`
-- `generate_report_pdf.py`
-
-Regenerate the PDF after updating the report:
-
-```powershell
-python generate_report_pdf.py
-```
+- `24I2031_Talha_A_A#02.pdf`
+- `24I2031_Talha_A_A#02.zip`
