@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Menu item placeholder">
+  <rect width="640" height="360" fill="#e9efca"/>
+  <circle cx="320" cy="180" r="88" fill="#173f35"/>
+  <path d="M250 180h140M320 110v140" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+</svg>
