@@ -3,15 +3,17 @@ import { Link, useParams } from 'react-router-dom'
 import { menuItems } from '../data/menu'
 import { formatCurrency } from '../utils/formatCurrency'
 import { PageShell } from '../components/PageShell'
+import { useCart } from '../context/useCart'
 
 const MAX_QUANTITY = 8
-const CART_KEY = 'campusbite-cart'
 
 export function Details() {
   const { id } = useParams()
   const item = menuItems.find((menuItem) => menuItem.id === id)
   const [quantity, setQuantity] = useState(1)
   const [message, setMessage] = useState('')
+  const [bundleType, setBundleType] = useState('veg')
+  const { addItem } = useCart()
 
   if (!item) {
     return (
@@ -25,20 +27,7 @@ export function Details() {
   }
 
   function addToCart() {
-    let cart = []
-    try {
-      cart = JSON.parse(localStorage.getItem(CART_KEY) || '[]')
-    } catch {
-      cart = []
-    }
-
-    const existing = cart.find((cartItem) => cartItem.id === item.id)
-    if (existing) {
-      existing.quantity = Math.min(MAX_QUANTITY, existing.quantity + quantity)
-    } else {
-      cart.push({ id: item.id, quantity })
-    }
-    localStorage.setItem(CART_KEY, JSON.stringify(cart))
+    addItem(item.id, quantity, item.id === 'weekly-student-bundle' ? bundleType : undefined)
     setMessage(`${quantity} x ${item.name} added to cart`)
   }
 
@@ -70,6 +59,22 @@ export function Details() {
             ))}
           </select>
           <p className="limit-message">Maximum 8 of any single item per order.</p>
+          {item.id === 'weekly-student-bundle' && (
+            <>
+              <label htmlFor="bundle-type">Bundle meal style</label>
+              <select
+                id="bundle-type"
+                value={bundleType}
+                onChange={(event) => setBundleType(event.target.value)}
+              >
+                <option value="veg">Vegetarian</option>
+                <option value="nonveg">Non-vegetarian</option>
+              </select>
+              <p className="limit-message">
+                Keep bundle meals and regular cart items in the same dietary style.
+              </p>
+            </>
+          )}
           <button className="primary-action" type="button" onClick={addToCart}>
             Add to cart
           </button>
