@@ -28,3 +28,17 @@ npm run preview
 ```powershell
 npm test
 ```
+
+## Assignment report
+
+The submission-ready PDF source and generated report are:
+
+- `report.md`
+- `CS4032_Assignment_02_CampusBite_Report.pdf`
+- `generate_report_pdf.py`
+
+Regenerate the PDF after updating the report:
+
+```powershell
+python generate_report_pdf.py
+```
