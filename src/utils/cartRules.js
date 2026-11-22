@@ -1,4 +1,9 @@
 export const MAX_QUANTITY = 8
+export const DELIVERY_MINIMUM = 800
+
+export function getDeliveryRemaining(subtotal) {
+  return Math.max(0, DELIVERY_MINIMUM - subtotal)
+}
 
 export function getQuantityWithinLimit(quantity) {
   return Number.isInteger(quantity) && quantity >= 1 && quantity <= MAX_QUANTITY
